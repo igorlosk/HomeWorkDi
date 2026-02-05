@@ -9,8 +9,8 @@ public class GreetingPrinterConstructor {
         this.greetingService = greetingService;
     }
 
-    public void print(String greeting){
-        System.out.println(greetingService.greet(greeting));
+    public void print(String greeting) {
+        System.out.println("Message from \"GreetingPrinterConstructor\": " + greetingService.greet(greeting));
     }
 
 

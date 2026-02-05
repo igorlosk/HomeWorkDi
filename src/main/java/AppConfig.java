@@ -1,4 +1,5 @@
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +21,7 @@ public class AppConfig {
     }
 
     @Bean
-    public GreetingPrinterConstructor greetingPrinterConstructor(GreetingService greetingService) {
+    public GreetingPrinterConstructor greetingPrinterConstructor(@Qualifier("formalGreetingService") GreetingService greetingService) {
         return new GreetingPrinterConstructor(greetingService);
     }
 

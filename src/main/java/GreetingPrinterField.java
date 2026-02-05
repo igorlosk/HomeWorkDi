@@ -3,11 +3,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class GreetingPrinterField {
-    @Autowired
+    @Autowired()
     private GreetingService greetingService;
 
-    public void print(String greeting){
-        System.out.println(greetingService.greet(greeting));
+    public void print(String greeting) {
+        System.out.println("Message from \"GreetingPrinterField\": " + greetingService.greet(greeting));
     }
 
 
